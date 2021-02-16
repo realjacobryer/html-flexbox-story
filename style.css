@@ -1,0 +1,134 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+h1 {
+    color: white;
+    background-color: #5A6B73;
+    padding: 2.5%;
+    margin-bottom: 0;
+}
+
+/* I did more or less steal this code from another news website. (I think USA Today?)
+I liked the way their links would be underlined in blue, but the text would remain the same color.
+So I inspected the page and identifed how they accomplished it.*/
+a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: #0098fe;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 75%;
+    margin-bottom: 2.5%;
+}
+
+.container {
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.container.photo {
+    max-width: 1200px;
+    padding: 0;
+}
+
+.flex-image {
+    margin-bottom: 5px;
+}
+
+.footer {
+    color: white;
+    background-color: #5A6B73;
+    font-size: 65%;
+    font-style: italic;
+    padding: 1%;
+    margin-bottom: 1%;
+}
+
+#byline {
+    font-style: italic;
+    font-size: 80%;
+    border-top: thin solid black;
+}
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+@media(min-width: 681px) {
+
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+    html, body {
+        font-size: 1.2em;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .flex-image {
+        flex-basis: 100%;
+    }
+}
+
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 729px) {
+
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 729px or larger -- so desktop */
+    /*In looking at actual website pages, I was noticing that many of them were offset in order to accomadate ads or additional articles to the right.
+    Additionally, the top of a page usually has a menu to access other content on the site.
+    This was my attempt to ape that style. I wish I could figure out how to make the images more natural looking.*/
+    html, body {
+        margin-right: 10%;
+    }
+
+    .container {
+        max-width: 800px;
+    }
+
+    .container.photo {
+        max-width: 800px;
+        margin-left: 15%;
+    }
+}
+
+/*All in all, I'm satisfied with how this page looks on Mobile and Tablet, but designing for the actual webpage was tougher.
+I could have spent much more time trying to perfect it, I really do love tinkering around with features and seeing how they all fit together.
+But at the end of the day, I've been trying to do better with living a mantra of "Perfect is the enemy of done," and accept sometimes you need to just move on. */
