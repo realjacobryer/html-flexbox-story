@@ -101,7 +101,7 @@ figcaption {
     }
 
     .flex-image {
-        flex-basis: 100%;
+        flex-basis: 50%;
     }
 }
 
