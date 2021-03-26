@@ -112,12 +112,6 @@ figcaption {
 
     /* Any adjustments for desktop and larger go here.
     Note these styles will be applied to anything 729px or larger -- so desktop */
-    /*In looking at actual website pages, I was noticing that many of them were offset in order to accomadate ads or additional articles to the right.
-    Additionally, the top of a page usually has a menu to access other content on the site.
-    This was my attempt to ape that style. I wish I could figure out how to make the images more natural looking.*/
-    html, body {
-        margin-right: 10%;
-    }
 
     .container {
         max-width: 800px;
@@ -128,7 +122,3 @@ figcaption {
         margin-left: 15%;
     }
 }
-
-/*All in all, I'm satisfied with how this page looks on Mobile and Tablet, but designing for the actual webpage was tougher.
-I could have spent much more time trying to perfect it, I really do love tinkering around with features and seeing how they all fit together.
-But at the end of the day, I've been trying to do better with living a mantra of "Perfect is the enemy of done," and accept sometimes you need to just move on. */
